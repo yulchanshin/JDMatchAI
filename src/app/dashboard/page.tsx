@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { DashboardCards } from "@/components/dashboard-cards"
@@ -29,7 +30,9 @@ export default function DashboardPage() {
                         Overview
                     </h2>
                     <div className="flex items-center space-x-2">
-                        <Button>New Optimization</Button>
+                        <Link href="/optimize">
+                            <Button>New Optimization</Button>
+                        </Link>
                     </div>
                 </div>
                 <Tabs defaultValue="overview" className="space-y-4">
@@ -46,8 +49,8 @@ export default function DashboardPage() {
                             <RecentBookmarks />
                         </div>
                     </TabsContent>
-                </Tabs>
-            </div>
-        </div>
+                </Tabs >
+            </div >
+        </div >
     )
 }
